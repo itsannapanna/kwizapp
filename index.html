@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Irene Bernardi">
+    <meta name="description" content="Quiz Pro Quo is an exciting and fun-filled trivia game that tests your knowledge on various pop culture topics.">
+    <meta name="keywords" content="Quiz, Trivia, Game, Pop Culture, Music, Movies, Sports, History">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <title>Welcome to Quiz Pro Quo!</title>
+  </head>
+  <body class="flex-container">
+    <a href="game.html">
+    <img class="logo" src="images.jpg" alt="logo">
+    </a>
+    <!-- Outer Container -->
+    <div id="outer-container">
+      <h2>Welcome to the Quiz Pro Quo Bonanza!</h2>
+      <p>Step right up to Quiz Pro Quo, your ticket to a pop culture trivia showdown! Show off your knowledge of everything from cool tunes and blockbuster flicks to high-energy sports and captivating history. Can you conquer the leaderboard? Game on!</p>
+      <p>Use the nifty buttons below to journey through our site. Want to get back here anytime? Just click the Quiz Pro Quo logo at the top of any page. Let's roll!</p>
+      <div class="btn-group">
+        <button id="open-modal" class="btn">Game Rules</button>
+        <a href="game.html" class="btn">Play</a>
+        <a href="leaderboard.html" id="highScores" class="btn">Leaderboard</a>
+        <a href="contact-form.html" target="_blank" class="btn">Reach Out</a>
+      </div>
+    </div>
+    <!-- Modal Container -->
+    <div id="modal-container">
+      <div id="modal-content">
+        <h2>Game Rules</h2>
+        <p>🚀 Hit 'Start Quiz' to take a thrilling ride into the world of pop culture trivia!</p>
+        <p>🔍 Choose your own adventure by selecting a difficulty level. Easy, medium, or hard - you're the captain here!</p>
+        <p>💡 Think you know the answer? Prove it! Click on your guess and see if you're right!</p>
+        <p>🎯 Once the trivia fun begins, there's no turning back! Well, unless you hit the page logo or choose 'Quit'. We get it, sometimes even heroes need a break!</p>
+        <p>🏆 Finish up, check your score and celebrate! But remember, there's always another round to conquer. Can you beat your own best?</p>
+        <button id="close-modal" class="btn">Close</button>
+      </div>
+    </div>
+    <!-- Footer with Social Links -->
+    <footer class="footer">
+      <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

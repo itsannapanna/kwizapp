@@ -1,0 +1,38 @@
+import json
+import os
+
+def txt_to_json(input_file, output_file):
+    downloads_path = os.path.expanduser('~/Downloads')
+    input_file_path = os.path.join(downloads_path, input_file)
+
+    with open(input_file_path, 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+
+    data = {"questions": []}
+    current_question = None
+    current_answer = ""  # Initialize current_answer
+
+    for line in lines:
+        line = line.strip()
+        
+        if line.startswith('Q'):
+            # This line is a question
+            if current_question:
+                data["questions"].append({"question": current_question[3:].strip(), "answer": current_answer.strip()})
+            current_question = line
+            current_answer = ""
+        elif line.startswith('A'):
+            current_answer += line[3:] + " "
+        else:
+            if current_question:
+                current_question += " " + line
+            elif current_answer:
+                current_answer += line + " "
+
+    if current_question:
+        data["questions"].append({"question": current_question[2:].strip(), "answer": current_answer.strip()})
+
+    with open(output_file, 'w', encoding='utf-8') as json_file:
+        json.dump(data, json_file, indent=2)
+
+txt_to_json('pdf-biztech-filler-quiz-el-dorado-2022_compress.txt', 'output.json')

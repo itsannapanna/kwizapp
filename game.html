@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Irene Bernardi" >
+    <meta name="description" content="Kwizzing is an exciting and fun-filled trivia game that tests your knowledge on various pop culture topics." >
+    <meta name="keywords" content="Quiz, Trivia, Game, Pop Culture, Music, Movies, Sports, History" >
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images-1.jpg">
+    <title>Welcome to Kwizzing!</title>
+  </head>
+  <body class="flex-container">
+    <a href="index.html">
+    <img class="logo" src="images.jpg" alt="logo">
+    </a>
+    <!-- Quiz Header -->
+    <div id="quiz-container" class="quiz-container">
+      <div class="quiz-header">
+        <h1 id="quiz-title" class="quiz-title">Kwizzing</h1>
+        <div id="score-container" class="score-container">
+          <p>Score: <span id="score">0</span></p>
+          <p id="questions-left"></p>
+        </div>
+      </div>
+      <!-- Quiz Settings -->
+      <div id="settings-container" class="settings-container">
+        <select id="category" name="category">
+          <!-- Category options will be filled by JavaScript -->
+        </select>
+        <label for="questions">Number of Questions:</label>
+        <select id="questions">
+          <option value="5">5</option>
+          <option value="10" selected>10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+        <label for="questions">Seconds/Questions:</label>
+        <select id="timer">
+          <option value="30">30</option>
+          <option value="60" selected>60</option>
+        </select>
+        <button id="start-btn" class="start-btn">Start Quiz</button>
+      </div>
+      <div id="progress-container" class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <!-- Quiz Questions -->
+      <div id="question-container" class="question-container" hidden>
+        <p id="timer-countdown" class="timer-countdown"></p>
+        <p id="question" class="question"></p>
+        <div id="answer" class="answer"> </div>
+      </div>
+      <!-- Congratulations Message -->
+      <div id="congratulation" style="display: none;">
+        <h1>Congratulations!</h1>
+        <p>You scored 100%!</p>
+      </div>
+      <!-- Quiz Control Buttons -->
+      <div class="quiz-footer">
+        <button id="next-btn" class="next-btn" hidden>Next</button>
+        <button id="quit-btn" class="quit-btn" hidden>Quit</button>
+      </div>
+      <div class=" btn-group">
+        <a href="game.html" class="btn">Play Again?</a>
+        <a href="index.html" class="btn">Home</a>
+        <i id="mute-btn" class="fas fa-volume-up"></i>
+      </div>
+      <!-- Sounds -->
+      <audio id="correct-sound" src="assets/sound/correct-sound.wav" ></audio>
+      <audio id="wrong-sound" src="assets/sound/wrong-sound.wav" ></audio>
+      <audio id="congrats-music" src="assets/sound/congrats-music.wav" ></audio>
+    </div>
+    <!-- Footer with Social Links -->
+    <footer class="footer">
+      <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
